@@ -36,19 +36,23 @@ if st.button("Finalize Panel Setup"):
     else:
         st.subheader("Copy the following prompt for ChatGPT:")
 
-        # Prepare the prompt text
-        prompt = f"""You are the moderator for a virtual expert panel discussion. 
-        Your role is to create 20 questions and direct them to the appropriate panelists based on their expertise.
-        
-        Moderator: {moderator_name}, Expertise: {moderator_expertise}
-        
-        Panelists:
-        """
-        for i in range(len(panelist_name)):
-            prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
-        
-        prompt += "\n\nDiscussion Document: [Each member of the panel must introduce themselves verbally (such that when in ‘Voice mode’, the audio can be heard on the device upon which this session is being executed).
+# Prepare the prompt text
+prompt = f"""
+You are the moderator for a virtual expert panel discussion. 
+Your role is to create 20 questions and direct them to the appropriate panelists based on their expertise.
 
+Moderator: {moderator_name}, Expertise: {moderator_expertise}
+
+Panelists:
+"""
+for i in range(len(panelist_name)):
+    prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
+
+prompt += """
+Discussion Document: Each member of the panel must introduce themselves verbally (such that when in 'Voice mode', the audio can be heard on the device upon which this session is being executed).
+"""
+
+st.text_area("Engineered Prompt:", prompt)
 You are to put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
 
 The user is to be requested to switch to verbal conversational AI mode (‘Voice mode’), so that the conversation is audible on the device on which this session is executing.
