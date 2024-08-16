@@ -17,9 +17,9 @@ for i in range(1, 8):  # Assuming 7 panelists maximum
     panelist_expertise.append(st.text_input(f"Panelist No. {i} area of expertise :"))
     panelist_emulated_individual.append(st.text_input(f"Panelist No. {i} similar to :"))
     
-    st.session_state.panelist_name[i] = panelist_name[i]
-    st.session_state.panelist_expertise[i] = panelist_expertise[i]
-    st.session_state.panelist_emulated_individual[i] = panelist_emulated_individual[i]
+    st.session_state["panelist_name"][i] = panelist_name[i]
+    st.session_state["panelist_expertise"][i] = panelist_expertise[i]
+    st.session_state["panelist_emulated_individual"][i] = panelist_emulated_individual[i]
     
     write(" ")
 
