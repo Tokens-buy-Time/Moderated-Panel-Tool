@@ -12,7 +12,7 @@ panelist_emulated_individual = []
 moderator_name = None
 
 # Input for each panelist
-for i in range(1, 8):  # Assuming 7 panelists maximum
+for i in range(1, 8):  # Assuming 7 panelists plus moderator maximum
     
     name = st.text_input(f"Panelist {i} Name:")
     expertise = st.text_input(f"Panelist {i} Area of Expertise:")
@@ -42,9 +42,10 @@ prompt = f"""
 Moderator: {moderator_name}, Expertise: {moderator_expertise} 
 Panelists:
 """
-for i in range(len(panelist_name)):
-    prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
-
+   for i in range(len(panelist_name)):
+       prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
+    if i > 7:
+        break
 
 # Add the discussion instructions 
 
@@ -57,13 +58,13 @@ prompt += "\n\n The user is to be requested to switch to verbal conversational A
 
 st.text_area("Engineered Prompt:", prompt)
 [
-    You are to put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
+    The moderator must put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as the moderator determine most appropriate.
 
     The user is to be requested to switch to verbal conversational AI mode, referred to as voice mode, so that the conversation is audible on the device on which this session is executing.
 
-    They must be requested to switch to voice mode only after you have reviewed this prompt in its entirety and are ready to begin the panel moderated discusion.
+    The user must be requested to switch to voice mode only after you have reviewed this prompt in its entirety and are ready to begin the panel moderated discusion.
 
-    You must indicate that they can make the switch by letting them know via a message displayed on the screen.
+    You must indicate that the user can make the switch by letting the user know via a message displayed on the screen.
 
     The panel shall conduct its discussion in the manner that is typical of modern seminars and conferences.
 
@@ -73,7 +74,7 @@ st.text_area("Engineered Prompt:", prompt)
 
     (ii) discus any given topic, where the topic is to be developed - from a brief, supplied by the Device User, as the initial input and is to be used to supplement the complete engineered prompt - which defines the overall assignment - as raw training data contained within the uploaded document and committed to memory.
 
-    (iii) the Moderator using the user provided topic, to develop the aforementioned series of 20 questions, to be presented to the panel members after the used switches to voice mode,
+    (iii) the Moderator using the user provided briefing, PDF file uploaded, to develop the aforementioned series of 20 questions, to be presented to the panel members after the user switches to voice mode,
     (iv) each question then to be put to an individual panel member; one member at a time, while in voice mode.
 
     (B.1) The different voices are as follows :-
