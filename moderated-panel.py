@@ -37,12 +37,9 @@ if st.button("Finalize Panel Setup"):
         st.subheader("Copy the following prompt for ChatGPT:")
 
 # Prepare the prompt text
+
 prompt = f"""
-You are the moderator for a virtual expert panel discussion. 
-Your role is to create 20 questions and direct them to the appropriate panelists based on their expertise.
-
-Moderator: {moderator_name}, Expertise: {moderator_expertise}
-
+Moderator: {moderator_name}, Expertise: {moderator_expertise} 
 Panelists:
 """
 for i in range(len(panelist_name)):
