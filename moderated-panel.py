@@ -70,13 +70,13 @@ Conversation shall continue with a view to :-
 
 (B.1) The different voices are as follows :-
 
-(1) Michael = Moderator
-(2) Clay = Innovation Expert
-(3) Steve = Lean Start Up Expert
-(4) Alexander = Business Model design Expert
-(5) Bridger = Private Equity Fund Expert
-(6) Ernistine = Venture Capital Expert
-(7) Andy = Business Development Expert
+(1) panelist_name[1]
+(2) panelist_name[2]
+(3) panelist_name[3]
+(4) panelist_name[4]
+(5) panelist_name[5]
+(6) panelist_name[6]
+(7) panelist_name[7]
 
 (A.1) For each of the Moderator’s questions and each panel member’s comments or responses, voices are to be used for each response, as defined previously in this prompt.
 
