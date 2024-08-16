@@ -22,9 +22,13 @@ def panel("panelist_name", "panelist_expertise", panelist_emulated_individual")
        
        write(" ")
        
-       panelist_name.append(st.text_input(f"Panelist No. {i} name :"))
-       panelist_expertise.append(st.text_input(f"Panelist No. {i} area of expertise :"))
-       panelist_emulated_individual.append(st.text_input(f"Panelist No. {i} similar to :"))
+# panelist_name.append(st.text_input(f"Panelist No. {i} name :"))
+# panelist_expertise.append(st.text_input(f"Panelist No. {i} area of expertise :"))
+# panelist_emulated_individual.append(st.text_input(f"Panelist No. {i} similar to :"))
+
+# st.session_state["panelist_name"][i] = panelist_name[i]
+# st.session_state["panelist_expertise"][i] = panelist_expertise[i]
+# st.session_state["panelist_emulated_individual"][i] = panelist_emulated_individual[i]
     
 
 # Display Panelists
@@ -38,10 +42,7 @@ def panel_start():
     
     
 
-    
-    st.session_state["panelist_name"][i] = panelist_name[i]
-    st.session_state["panelist_expertise"][i] = panelist_expertise[i]
-    st.session_state["panelist_emulated_individual"][i] = panelist_emulated_individual[i]
+
     
 
 
