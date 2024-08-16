@@ -51,7 +51,7 @@ for i in range(len(panelist_name)):
         break
     
 # Add the instruction for switching to voice mode, ensuring straight quotes are used
-prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to the panel members after the user switches to 'voice mode'."
+prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to the panel members after the user switches to Voice Mode."
 prompt += "\n(iv) Each question will then be put to an individual panel member, one member at a time, while in Voice Mode."
 prompt += "\n\nThe user is to be requested to switch to verbal conversational AI Voice mode, so that the conversation is audible on the device on which this session is executing."
 
