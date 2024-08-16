@@ -47,7 +47,9 @@ Panelists:
 """
 for i in range(len(panelist_name)):
     prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
-
+    if i > 7:
+        break
+    
 prompt += "\n\nDiscussion Document: [Each member of the panel must introduce themselves verbally (such that when in 'Voice mode', the audio can be heard on the device upon which this session is being executed)."
 
 # Continuing the rest of the prompt
