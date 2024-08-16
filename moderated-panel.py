@@ -56,8 +56,7 @@ for i in range(len(panelist_name)):
 # prompt += " The user is to be requested to switch to verbal conversational AI mode, so that the conversation is audible on the device on which this session is executing."
 
 
-st.text_area("Engineered Prompt:", prompt)
-[
+st.text_area("Engineered Prompt:", prompt)[
     The moderator must put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as the moderator determine most appropriate.
 
     The user is to be requested to switch to verbal conversational AI mode, referred to as voice mode, so that the conversation is audible on the device on which this session is executing.
