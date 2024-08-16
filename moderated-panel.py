@@ -22,11 +22,11 @@ for i in range(1, 7):  # Assuming 7 panelists maximum
     panelist_emulated_individual.append(st.text_input(f"Panelist No. {i} similar to :"))
 
 # Display Responses
-def panel_start
+def panel_start():
     if st.button(""):
-        st.subheader("Panelist Responses:")
-        for i, response in enumerate(panelist_responses):
-            st.write(f"Panelist {i+1}: {panelist_name}")
+        st.subheader(" This session's panelist will be :-")
+        for i, panel in enumerate(panelist_name):
+            st.write(f"Panelist No. {i+1}: {panelist_name}")
 
 # Section for Audience
 st.header("Audience")
