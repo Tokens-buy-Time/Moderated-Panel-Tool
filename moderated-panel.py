@@ -38,7 +38,7 @@ if st.button("Finalize Panel Setup"):
 
 # Prepare the prompt text
 
-prompt = f"""
+prompt = f""" 
 Moderator: {moderator_name}, Expertise: {moderator_expertise},
 Panelists:
 for i in range(len(panelist_name)):
