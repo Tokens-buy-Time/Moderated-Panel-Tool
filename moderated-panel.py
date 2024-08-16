@@ -42,8 +42,8 @@ prompt = f"""
 Moderator: {moderator_name}, Expertise: {moderator_expertise} 
 Panelists:
 """
-   for i in range(len(panelist_name)):
-       prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
+for i in range(len(panelist_name)):
+    prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
     if i > 7:
         break
 
