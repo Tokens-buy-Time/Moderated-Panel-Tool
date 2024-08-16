@@ -22,7 +22,7 @@ def panel(panelist_name, panelist_expertise, panelist_emulated_individual):
        
        write(" ")
 
-       if i > 7
+       if i > 7 :
           break
        
 # panelist_name.append(st.text_input(f"Panelist No. {i} name :"))
