@@ -1,55 +1,39 @@
 import streamlit as st
-import pandas
-import numpy
 
 # Title of the app
 st.title("Moderated Panel Tool")
 
+# Initialize session state for panelists if it doesn't exist
+if 'panelist_data' not in st.session_state:
+    st.session_state['panelist_data'] = []
 
+# Function to capture panelist details
+def add_panelist():
+    panelist_name = st.text_input("Panelist Name", key="panelist_name")
+    panelist_expertise = st.text_input("Panelist Expertise", key="panelist_expertise")
+    panelist_emulated_individual = st.text_input("Emulated Individual", key="panelist_emulated_individual")
 
-# Section for Panelists
-def panel(panelist_name, panelist_expertise, panelist_emulated_individual):
+    if st.button("Add Panelist"):
+        if panelist_name and panelist_expertise and panelist_emulated_individual:
+            st.session_state['panelist_data'].append({
+                'name': panelist_name,
+                'expertise': panelist_expertise,
+                'emulated': panelist_emulated_individual
+            })
+            st.success("Panelist Added!")
+        else:
+            st.error("Please fill all the fields.")
 
-   st.header("Panelists")
-   panelist_name = []
-   panelist_expertise = []
-   panelist_emulated_individual = []
+# Function to display added panelists
+def display_panelists():
+    st.subheader("Panelists in This Session")
+    for i, panelist in enumerate(st.session_state['panelist_data']):
+        st.write(f"**Panelist {i + 1}:** {panelist['name']} - Expertise: {panelist['expertise']} - Emulates: {panelist['emulated']}")
 
-   for i in range(1, 8):  # Assuming 7 panelists maximum
-       
-       st.session_state["panelist_name"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_name"][i])
-       st.session_state["panelist_expertise"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_expertise"][i])
-       st.session_state["panelist_emulated_individual"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_emulated_individual"][i])
-       
-       write(" ")
+# Adding Panelist Section
+st.header("Add Panelists")
+add_panelist()
 
-       if i > 7 :
-          break
-       
-# panelist_name.append(st.text_input(f"Panelist No. {i} name :"))
-# panelist_expertise.append(st.text_input(f"Panelist No. {i} area of expertise :"))
-# panelist_emulated_individual.append(st.text_input(f"Panelist No. {i} similar to :"))
-
-# st.session_state["panelist_name"][i] = panelist_name[i]
-# st.session_state["panelist_expertise"][i] = panelist_expertise[i]
-# st.session_state["panelist_emulated_individual"][i] = panelist_emulated_individual[i]
-    
-
-# Display Panelists
-def panel_start():
-    
-    if st.button("List panelist"):
-        st.subheader(" This session's panelist will be :-")
-
-        panel(panelist_name, panelist_expertise, panelist_emulated_individual)
-       
-        for i, panel in enumerate(panelist_name):
-            st.write(f"Panelist No. {i+1}: {panelist_name}")
-    
-    
-
-
-    
-
-
-
+# Display Panelists Section
+if st.session_state['panelist_data']:
+    display_panelists()
