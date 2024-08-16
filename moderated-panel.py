@@ -17,13 +17,16 @@ panelist_expertise = []
 panelist_emulated_individual = []
 
 for i in range(1, 7):  # Assuming 7 panelists maximum
-    panelist_name.append(st.text_input(f"Panelist {i} panelist_namey:"))
+    panelist_name.append(st.text_input(f"Panelist No. {i} name :"))
+    panelist_expertise.append(st.text_input(f"Panelist No. {i} area of expertise :"))
+    panelist_emulated_individual.append(st.text_input(f"Panelist No. {i} similar to :"))
 
 # Display Responses
-if st.button("Submit Responses"):
-    st.subheader("Panelist Responses:")
-    for i, response in enumerate(panelist_responses):
-        st.write(f"Panelist {i+1}: {response}")
+def panel_start
+    if st.button(""):
+        st.subheader("Panelist Responses:")
+        for i, response in enumerate(panelist_responses):
+            st.write(f"Panelist {i+1}: {panelist_name}")
 
 # Section for Audience
 st.header("Audience")
