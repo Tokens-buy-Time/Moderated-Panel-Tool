@@ -8,13 +8,16 @@ st.title("Moderated Panel Tool")
 
 # Section for Moderator
 st.header("Moderator")
-moderator_question = st.text_input("Enter your question for the panel:")
+moderators_name = st.text_input("Enter name of moderator")
 
 # Section for Panelists
 st.header("Panelists")
-panelist_responses = []
-for i in range(1, 4):  # Assuming 3 panelists for simplicity
-    panelist_responses.append(st.text_input(f"Panelist {i} response:"))
+panelist_name = []
+panelist_expertise = []
+panelist_emulated_individual = []
+
+for i in range(1, 7):  # Assuming 7 panelists maximum
+    panelist_name.append(st.text_input(f"Panelist {i} panelist_namey:"))
 
 # Display Responses
 if st.button("Submit Responses"):
