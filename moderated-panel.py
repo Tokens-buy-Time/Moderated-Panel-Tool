@@ -110,7 +110,7 @@ st.text_area("Engineered Prompt:", prompt)
     (B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to voice mode.
 
     Return to (B.1)
-                       }
+}
 
         
         st.text_area("Engineered Prompt:", prompt)
