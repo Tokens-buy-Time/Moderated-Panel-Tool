@@ -56,7 +56,7 @@ prompt += "\n(iv) Each question will then be put to an individual panel member, 
 prompt += "\n\nThe user is to be requested to switch to verbal conversational AI voice mode, so that the conversation is audible on the device on which this session is executing."
 
 st.text_area("Engineered Prompt:", prompt)
-You are to put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
+You must put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
 
 The user is to be requested to switch to verbal conversational AI mode, referred to as voice mode, so that the conversation is audible on the device on which this session is executing.
 
