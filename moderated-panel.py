@@ -5,7 +5,7 @@ import numpy
 # Title of the app
 st.title("Moderated Panel Tool")
 
-panel(panelist_name, panelist_expertise, panelist_emulated_individual)
+
 
 # Section for Panelists
 def panel(panelist_name, panelist_expertise, panelist_emulated_individual):
@@ -40,7 +40,9 @@ def panel_start():
     
     if st.button("List panelist"):
         st.subheader(" This session's panelist will be :-")
-        
+
+        panel(panelist_name, panelist_expertise, panelist_emulated_individual)
+       
         for i, panel in enumerate(panelist_name):
             st.write(f"Panelist No. {i+1}: {panelist_name}")
     
