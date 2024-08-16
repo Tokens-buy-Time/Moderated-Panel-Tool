@@ -83,3 +83,13 @@ if st.button("Finalize Panel Setup"):
         
         # Display the final prompt
         st.text_area("Engineered Prompt:", prompt)
+
+# Now you can use openai as usual
+
+response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt="Good evening, switch to voice mode and experience this Moderated Panel discussiom",
+    max_tokens=50
+)
+
+st.write(response.choices[0].text)
