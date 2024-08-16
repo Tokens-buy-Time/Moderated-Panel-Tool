@@ -21,6 +21,9 @@ def panel("panelist_name", "panelist_expertise", "panelist_emulated_individual")
        st.session_state["panelist_emulated_individual"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_emulated_individual"][i])
        
        write(" ")
+
+       if i > 7
+          break
        
 # panelist_name.append(st.text_input(f"Panelist No. {i} name :"))
 # panelist_expertise.append(st.text_input(f"Panelist No. {i} area of expertise :"))
