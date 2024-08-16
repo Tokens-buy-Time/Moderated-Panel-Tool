@@ -51,14 +51,14 @@ for i in range(len(panelist_name)):
         break
     
 # Add the instruction for switching to voice mode, ensuring straight quotes are used
-prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to the panel members after the user switches to Voice Mode."
-prompt += "\n(iv) Each question will then be put to an individual panel member, one member at a time, while in Voice Mode."
-prompt += "\n\nThe user is to be requested to switch to verbal conversational AI Voice mode, so that the conversation is audible on the device on which this session is executing."
+prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to the panel members after the user switches to voice mode."
+prompt += "\n(iv) Each question will then be put to an individual panel member, one member at a time, while in voice mode."
+prompt += "\n\nThe user is to be requested to switch to verbal conversational AI voice mode, so that the conversation is audible on the device on which this session is executing."
 
 st.text_area("Engineered Prompt:", prompt)
 You are to put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
 
-The user is to be requested to switch to verbal conversational AI mode voice mode, so that the conversation is audible on the device on which this session is executing.
+The user is to be requested to switch to verbal conversational AI mode, referred to as voice mode, so that the conversation is audible on the device on which this session is executing.
 
 They must be requested to switch to voice mode only after you have reviewed this prompt in its entirety and are ready to begin the panel’s moderated discusion.
 
@@ -70,7 +70,7 @@ Conversation shall continue with a view to :-
 
 (i) having the panel discuss, using Conversational AI, where the participants are as previously defined,
 
-(ii) discus any given topic, where the topic is to be developed - from a brief, supplied by the Device’s User, as the initial input and is to be used to supplement the complete ‘engineered prompt’ - which defines the overall assignment - as raw ‘training data’ contained within the uploaded document and committed to memory.
+(ii) discus any given topic, where the topic is to be developed - from a brief, supplied by the Device’s User, as the initial input and is to be used to supplement the complete engineered prompt - which defines the overall assignment - as raw training data contained within the uploaded document and committed to memory.
 
 (iii) the Moderator using the user provided topic, to develop the aforementioned series of 20 questions, to be presented to the panel members after the used switches to voice mode,
 (iv) each question then to be put to an individual panel member; one member at a time, while in voice mode.
@@ -85,11 +85,11 @@ Conversation shall continue with a view to :-
 (6) panelist_name[6]
 (7) panelist_name[7]
 
-(A.1) For each of the Moderator’s questions and each panel member’s comments or responses, voices are to be used for each response, as defined previously in this prompt.
+(A.1) For each of the Moderator questions and each panel member comment or response, voices are to be used for each response, as defined previously in this prompt.
 
-(A.2) Where the Moderator is directing a question to a specific panel member, the Moderator must - after identifying itself as the Moderator - ahead of the question being asked - also identify the panel member to whom the question is being directed.
+(A.2) Where the Moderator is directing a question to a specific panel member, the Moderator must - after identifying itself as the Moderator - ahead of the question being asked - plus also identify the panel member to whom the question is being directed.
 
-(A.3) If the Moderator is making a statement or a comment, the statement or comment is to be prefaced as being that of the Moderator’s.
+(A.3) If the Moderator is making a statement or a comment, the statement or comment is to be prefaced as being that of the Moderator.
 
 (A.4) Responses from panel members must include in depth detail (> 250 words) and multiple insights (> 3).
 
@@ -105,7 +105,7 @@ Pre conversation actions :
 
 (B.4) The topic for discussion shall be the content of the uploaded document; with a view to its evaluation and assessment; the topic being based upon what you determine the document to be about.
 
-(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to ‘Voice mode’
+(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to voice mode.
 
 Return to (B.1)
  ]"
