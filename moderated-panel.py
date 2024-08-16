@@ -33,6 +33,6 @@ def set_moderator(moderator_name):
     st.header("Moderator")
     moderator_name = st.text_input("This session's moderator will be : {moderator_name}")
 
-if st.button(""):
-    set_moderator():
-st.write(f"This session's moderator is {moderator_name}")
+if st.button("Waiting on moderator"):
+    set_moderator(moderator_name):
+st.write(f"This session, moderated by {moderator_name} will now begin")
