@@ -51,7 +51,7 @@ for i in range(len(panelist_name)):
         break
     
 # Add the instruction for switching to voice mode, ensuring straight quotes are used
-prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to the panel members after the user switches to voice mode."
+prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to panel members after the user switches to voice mode."
 prompt += "\n(iv) Each question will then be put to an individual panel member, one member at a time, while in voice mode."
 prompt += "\n\nThe user is to be requested to switch to verbal conversational AI voice mode, so that the conversation is audible on the device on which this session is executing."
 
@@ -70,7 +70,7 @@ Conversation shall continue with a view to :-
 
 (i) having the panel discuss, using Conversational AI, where the participants are as previously defined,
 
-(ii) discus any given topic, where the topic is to be developed - from a brief, supplied by the Device’s User, as the initial input and is to be used to supplement the complete engineered prompt - which defines the overall assignment - as raw training data contained within the uploaded document and committed to memory.
+(ii) discus any given topic, where the topic is to be developed - from a brief, supplied by the Device User, as the initial input and is to be used to supplement the complete engineered prompt - which defines the overall assignment - as raw training data contained within the uploaded document and committed to memory.
 
 (iii) the Moderator using the user provided topic, to develop the aforementioned series of 20 questions, to be presented to the panel members after the used switches to voice mode,
 (iv) each question then to be put to an individual panel member; one member at a time, while in voice mode.
