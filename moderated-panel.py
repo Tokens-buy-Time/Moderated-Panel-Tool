@@ -60,7 +60,7 @@ You are to put 20 questions to the panel, choosing a particular panel member to 
 
 The user is to be requested to switch to verbal conversational AI mode, referred to as voice mode, so that the conversation is audible on the device on which this session is executing.
 
-They must be requested to switch to voice mode only after you have reviewed this prompt in its entirety and are ready to begin the panel’s moderated discusion.
+They must be requested to switch to voice mode only after you have reviewed this prompt in its entirety and are ready to begin the panel moderated discusion.
 
 You must indicate that they can make the switch by letting them know via a message displayed on the screen.
 
