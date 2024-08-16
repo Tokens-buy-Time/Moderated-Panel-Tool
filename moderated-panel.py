@@ -3,78 +3,48 @@ import streamlit as st
 # Title of the app
 st.title("Moderated Panel Tool")
 
-# Initialize session state for storing panelists if it doesn't already exist
-if 'panelist_names' not in st.session_state:
-    st.session_state['panelist_names'] = []
-if 'panelist_expertises' not in st.session_state:
-    st.session_state['panelist_expertises'] = []
-if 'panelist_emulated_individuals' not in st.session_state:
-    st.session_state['panelist_emulated_individuals'] = []
-if 'stage' not in st.session_state:
-    st.session_state['stage'] = 'panel_setup'
-if 'briefing_text' not in st.session_state:
-    st.session_state['briefing_text'] = ""
+# Section for Panelists
+st.header("Panel Setup")
 
-# Function to add panelist details
-def add_panelist():
-    panelist_name = st.text_input("Panelist Name")
-    panelist_expertise = st.text_input("Panelist Expertise")
-    panelist_emulated_individual = st.text_input("Emulated Individual")
+panelist_name = []
+panelist_expertise = []
+panelist_emulated_individual = []
+moderator_name = None
 
-    if st.button("Add Panelist"):
-        if panelist_name and panelist_expertise and panelist_emulated_individual:
-            st.session_state['panelist_names'].append(panelist_name)
-            st.session_state['panelist_expertises'].append(panelist_expertise)
-            st.session_state['panelist_emulated_individuals'].append(panelist_emulated_individual)
-            st.success(f"Panelist '{panelist_name}' Added!")
-        else:
-            st.error("Please fill in all the fields.")
+# Input for each panelist
+for i in range(1, 8):  # Assuming 7 panelists maximum
+    
+    name = st.text_input(f"Panelist {i} Name:")
+    expertise = st.text_input(f"Panelist {i} Area of Expertise:")
+    emulated_individual = st.text_input(f"Panelist {i} Emulated Expert:")
+    
+    if st.checkbox(f"Is this panelist the Moderator?", key=f"mod_{i}"):
+        moderator_name = name  # Assign this panelist as the moderator
+        moderator_expertise = expertise
+    else:
+        panelist_name.append(name)
+        panelist_expertise.append(expertise)
+        panelist_emulated_individual.append(emulated_individual)
+    
+    st.write(" ")
 
-# Function to display added panelists
-def display_panelists():
-    st.subheader("Panelists in This Session")
-    for i in range(len(st.session_state['panelist_names'])):
-        st.write(f"**Panelist {i + 1}:** {st.session_state['panelist_names'][i]} - Expertise: {st.session_state['panelist_expertises'][i]} - Emulates: {st.session_state['panelist_emulated_individuals'][i]}")
+# Button to finalize and generate the prompt
+if st.button("Finalize Panel Setup"):
+    
+    if moderator_name is None:
+        st.warning("Please select a moderator.")
+    else:
+        st.subheader("Copy the following prompt for ChatGPT:")
 
-# Function to handle document upload
-def load_briefing_document():
-    try:
-        with open("Moderators-Brief.txt", "r") as file:
-            briefing_text = file.read()
-        st.session_state['briefing_text'] = briefing_text
-        st.success("Document 'Moderators-Brief.txt' loaded successfully!")
-    except FileNotFoundError:
-        st.error("File 'Moderators-Brief.txt' not found. Please make sure it's in the correct directory.")
-
-# Function to generate questions for panelists
-def generate_questions():
-    if 'briefing_text' in st.session_state:
-        st.header("Generated Questions")
-
-        # Replace this with GPT-4 API logic to generate questions based on briefing text
-        for i, panelist_expertise in enumerate(st.session_state['panelist_expertises']):
-            st.write(f"**Questions for {st.session_state['panelist_names'][i]} (Expertise: {panelist_expertise}):**")
-            # Simulate generating questions (replace with GPT-4)
-            for j in range(1, 6):  # Assuming 5 questions per panelist
-                st.write(f"Question {j}: [Generated Question based on briefing for {panelist_expertise}]")
-
-# Panelist setup stage
-if st.session_state['stage'] == 'panel_setup':
-    st.header("Add Panelists")
-    add_panelist()
-    display_panelists()
-
-    if st.button("Proceed to Load Briefing Document"):
-        st.session_state['stage'] = 'upload_briefing'
-
-# Load briefing document stage
-elif st.session_state['stage'] == 'upload_briefing':
-    load_briefing_document()
-
-    if 'briefing_text' in st.session_state and st.session_state['briefing_text']:
-        if st.button("Generate Questions"):
-            st.session_state['stage'] = 'generate_questions'
-
-# Generate questions stage
-elif st.session_state['stage'] == 'generate_questions':
-    generate_questions()
+        # Prepare the prompt text
+        prompt = f"""You are the moderator for a virtual expert panel discussion. 
+        Your role is to create 20 questions and direct them to the appropriate panelists based on their expertise.
+        
+        Moderator: {moderator_name}, Expertise: {moderator_expertise}
+        
+        Panelists:
+        """
+        for i in range(len(panelist_name)):
+            prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
+        
+        prompt += "\n\nDiscussion Document: [Insert content from Moderators-Brief​⬤
