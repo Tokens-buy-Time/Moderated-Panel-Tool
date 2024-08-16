@@ -53,4 +53,28 @@ def generate_questions():
 
         # Replace this with GPT-4 API logic to generate questions based on briefing text
         for i, panelist_expertise in enumerate(st.session_state['panelist_expertises']):
-            st.write(f"**Questions​⬤
+            st.write(f"**Questions for {st.session_state['panelist_names'][i]} (Expertise: {panelist_expertise}):**")
+            # Simulate generating questions (replace with GPT-4)
+            for j in range(1, 6):  # Assuming 5 questions per panelist
+                st.write(f"Question {j}: [Generated Question based on briefing for {panelist_expertise}]")
+
+# Panelist setup stage
+if st.session_state['stage'] == 'panel_setup':
+    st.header("Add Panelists")
+    add_panelist()
+    display_panelists()
+
+    if st.button("Proceed to Load Briefing Document"):
+        st.session_state['stage'] = 'upload_briefing'
+
+# Load briefing document stage
+elif st.session_state['stage'] == 'upload_briefing':
+    load_briefing_document()
+
+    if 'briefing_text' in st.session_state and st.session_state['briefing_text']:
+        if st.button("Generate Questions"):
+            st.session_state['stage'] = 'generate_questions'
+
+# Generate questions stage
+elif st.session_state['stage'] == 'generate_questions':
+    generate_questions()
