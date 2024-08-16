@@ -57,7 +57,7 @@ prompt += "\n\n The user is to be requested to switch to verbal conversational A
 
 
 st.text_area("Engineered Prompt:", prompt)
-[
+{
     The moderator must put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as the moderator determine most appropriate.
 
     The user is to be requested to switch to verbal conversational AI mode, referred to as voice mode, so that the conversation is audible on the device on which this session is executing.
@@ -110,7 +110,7 @@ st.text_area("Engineered Prompt:", prompt)
     (B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to voice mode.
 
     Return to (B.1)
- ]
+                       }
 
         
         st.text_area("Engineered Prompt:", prompt)
