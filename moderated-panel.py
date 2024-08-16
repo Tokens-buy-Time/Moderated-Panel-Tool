@@ -7,7 +7,7 @@ st.title("Moderated Panel Tool")
 
 
 # Section for Panelists
-def panel("panelist_name", "panelist_expertise", panelist_emulated_individual")
+def panel("panelist_name", "panelist_expertise", "panelist_emulated_individual")
 
    st.header("Panelists")
    panelist_name = []
