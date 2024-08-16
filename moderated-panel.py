@@ -1,5 +1,4 @@
 import streamlit as st
-import python as py
 import pandas
 import numpy
 
