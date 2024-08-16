@@ -38,14 +38,14 @@ if st.button("Finalize Panel Setup"):
 
 # Prepare the prompt text
 
-prompt = f""
+prompt = f"""
 Moderator: {moderator_name}, Expertise: {moderator_expertise},
 Panelists:
 for i in range(len(panelist_name)):
     prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
     if i > 7:
         break
-""
+"""
 # Add the discussion instructions 
 
 prompt += "\n\n(c) The Moderator will use the user-provided topic to develop a series of 20 questions."
