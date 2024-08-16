@@ -87,7 +87,7 @@ if st.button("Finalize Panel Setup"):
 # Now you can use openai as usual
 
 response = openai.Completion.create(
-    model="text-davinci-003",
+    model="gpt-4o",
     prompt="Good evening, switch to voice mode and experience this Moderated Panel discussiom",
     max_tokens=50
 )
