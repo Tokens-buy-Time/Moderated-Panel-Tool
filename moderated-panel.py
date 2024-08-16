@@ -1,7 +1,37 @@
 import streamlit as st
+import openai
 
 # Title of the app
 st.title("Moderated Panel Tool")
+
+# Section for Panelists
+st.header("Panel Setup")
+
+# Add input fields and finalize the panel setup as before...
+
+# Button to send prompt to OpenAI API
+if st.button("Send Prompt to ChatGPT"):
+    prompt = st.session_state['prompt']  # Assuming you've saved the prompt in session state
+
+    try:
+        response = openai.Completion.create(
+            engine="gpt-4",  # or "gpt-3.5-turbo" if you have restrictions
+            prompt=prompt,
+            max_tokens=1024,
+            n=1,
+            stop=None,
+            temperature=0.7,
+        )
+
+        generated_text = response.choices[0].text.strip()
+
+        st.subheader("Response from ChatGPT:")
+        st.write(generated_text)
+
+    except Exception as e:
+        st.error(f"Error: {e}")
+
+
 
 # Section for Panelists
 st.header("Panel Setup")
