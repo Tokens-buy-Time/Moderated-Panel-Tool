@@ -5,6 +5,7 @@ import numpy
 # Title of the app
 st.title("Moderated Panel Tool")
 
+panel(panelist_name, panelist_expertise, panelist_emulated_individual)
 
 # Section for Panelists
 def panel(panelist_name, panelist_expertise, panelist_emulated_individual):
