@@ -50,10 +50,10 @@ for i in range(len(panelist_name)):
     if i > 7:
         break
     
-prompt += "\n\nDiscussion Document: [Each member of the panel must introduce themselves verbally (such that when in 'Voice mode', the audio can be heard on the device upon which this session is being executed)."
-
-# Continuing the rest of the prompt
-prompt += "The user is to be requested to switch to verbal conversational AI mode ('Voice mode'), so that the conversation is audible on the device on which this session is executing."
+# Add the instruction for switching to voice mode, ensuring straight quotes are used
+prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions, which will be presented to the panel members after the user switches to 'voice mode'."
+prompt += "\n(iv) Each question will then be put to an individual panel member, one member at a time, while in 'voice mode'."
+prompt += "\n\nThe user is to be requested to switch to verbal conversational AI mode ('Voice mode'), so that the conversation is audible on the device on which this session is executing."
 
 st.text_area("Engineered Prompt:", prompt)
 You are to put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
