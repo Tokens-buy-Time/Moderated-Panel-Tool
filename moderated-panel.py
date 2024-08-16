@@ -47,11 +47,9 @@ Panelists:
 """
 for i in range(len(panelist_name)):
     prompt += f"\nPanelist {i+1}: {panelist_name[i]}, Expertise: {panelist_expertise[i]}, Emulated Expert: {panelist_emulated_individual[i]}"
-    if i > 8:
-        break
 
 
-# Add the instruction for switching to voice mode, ensuring straight quotes are used
+# Add the discussion instructions 
 
 prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions."
 prompt += " The questions will be presented to the panel members after the user switches to voice mode."
