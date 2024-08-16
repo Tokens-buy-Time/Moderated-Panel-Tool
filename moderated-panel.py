@@ -7,19 +7,20 @@ st.title("Moderated Panel Tool")
 
 
 # Section for Panelists
-def panel("panrlist_name", "panelist_expertise", panelist_emulated_individual")
+def panel("panelist_name", "panelist_expertise", panelist_emulated_individual")
 
 st.header("Panelists")
-
 panelist_name = []
 panelist_expertise = []
 panelist_emulated_individual = []
 
 for i in range(1, 8):  # Assuming 7 panelists maximum
 
-    st.session_state["panelist_name"][i] = input
-    st.session_state["panelist_expertise"][i] = input
-    st.session_state["panelist_emulated_individual"][i] = input
+    = st.number_input(label="Panelists No.", value=st.session_state["panelist_name"][i])
+    
+    st.session_state["panelist_name"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_name"][i])
+    st.session_state["panelist_expertise"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_expertise"][i])
+    st.session_state["panelist_emulated_individual"][i] = st.number_input(label="Panelists No.", value=st.session_state["panelist_emulated_individual"][i])
 
     
 
