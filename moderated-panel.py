@@ -58,7 +58,7 @@ prompt += "\n\nThe user is to be requested to switch to verbal conversational AI
 st.text_area("Engineered Prompt:", prompt)
 You are to put 20 questions to the panel, choosing a particular panel member to kick-off the conversation for each question, as you determine most appropriate.
 
-The user is to be requested to switch to verbal conversational AI mode (‘Voice mode’), so that the conversation is audible on the device on which this session is executing.
+The user is to be requested to switch to verbal conversational AI mode voice mode, so that the conversation is audible on the device on which this session is executing.
 
 They must be requested to switch to voice mode only after you have reviewed this prompt in its entirety and are ready to begin the panel’s moderated discusion.
 
@@ -72,8 +72,8 @@ Conversation shall continue with a view to :-
 
 (ii) discus any given topic, where the topic is to be developed - from a brief, supplied by the Device’s User, as the initial input and is to be used to supplement the complete ‘engineered prompt’ - which defines the overall assignment - as raw ‘training data’ contained within the uploaded document and committed to memory.
 
-(iii) the Moderator using the user provided topic, to develop the aforementioned series of 20 questions, to be presented to the panel members after the used switches to ‘voice mode’,
-(iv) each question then to be put to an individual panel member; one member at a time, while in ‘voice mode’.
+(iii) the Moderator using the user provided topic, to develop the aforementioned series of 20 questions, to be presented to the panel members after the used switches to voice mode,
+(iv) each question then to be put to an individual panel member; one member at a time, while in voice mode.
 
 (B.1) The different voices are as follows :-
 
