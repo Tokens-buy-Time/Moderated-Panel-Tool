@@ -48,7 +48,6 @@ for i in range(len(panelist_name)):
 """
 # Add the discussion instructions 
 
-
 # prompt += "\n\n(c) The Moderator will use the user-provided topic to develop a series of 20 questions."
 # prompt += " \n\n(d) The questions will be presented to the panel members after the user switches to voice mode."
 # prompt += "\n(d) Each question will then be put to an individual panel member, one member at a time, while in voice mode."
