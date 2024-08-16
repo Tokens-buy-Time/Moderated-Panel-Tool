@@ -28,9 +28,11 @@ def panel_start():
         for i, panel in enumerate(panelist_name):
             st.write(f"Panelist No. {i+1}: {panelist_name}")
 
-# Section for Audience
-st.header("Audience")
-audience_question = st.text_input("Audience, ask a question:")
+# Section for the moderator
+def set_moderator(moderator_name):
+    st.header("Moderator")
+    moderator_name = st.text_input("This session's moderator will be : {moderator_name}")
 
-if st.button("Submit Audience Question"):
-    st.write(f"Audience Question: {audience_question}")
+if st.button(""):
+    set_moderator():
+st.write(f"This session's moderator is {moderator_name}")
