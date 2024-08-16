@@ -56,8 +56,8 @@ for i in range(len(panelist_name)):
 prompt += "\n\n(iii) The Moderator will use the user-provided topic to develop a series of 20 questions."
 prompt += " The questions will be presented to the panel members after the user switches to voice mode."
 prompt += "\n(iv) Each question will then be put to an individual panel member, one member at a time, while in voice mode."
-prompt += "\n\nYou are to put 20 questions to the panel, choosing a particular panel member to kick off the conversation for each question as you determine most appropriate."
-prompt += "\n\nThe user is to be requested to switch to verbal conversational AI mode, so that the conversation is audible on the device on which this session is executing."
+prompt += "\n\n You are to put 20 questions to the panel, choosing a particular panel member to kick off the conversation for each question as you determine most appropriate."
+prompt += "\n\n The user is to be requested to switch to verbal conversational AI mode, so that the conversation is audible on the device on which this session is executing."
 
 
 st.text_area("Engineered Prompt:", prompt)
