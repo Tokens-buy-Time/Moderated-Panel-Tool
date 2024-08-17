@@ -50,10 +50,12 @@ if "panelist_emulated_individual" not in st.session_state:
 
 # Input for each panelist
 for i in range(1, 8):  # Assuming 7 panelists plus moderator maximum
+
+# value=st.session_state["panelist_"][i])
     
-    name = st.text_input(f"Panelist {i} Name: {panelist_name}[{i}]")
-    expertise = st.text_input(f"Panelist {i} Area of Expertise: {panelist_expertise}[{i}]")
-    emulated_individual = st.text_input(f"Panelist {i} Emulated Expert: {panelist_emulated_individual}[{i}]")
+    name = st.text_input(f"Panelist {i} Name: ", value=st.session_state["panelist_name"][i])
+    expertise = st.text_input(f"Panelist {i} Area of Expertise: ", value=st.session_state["panelist_expertise"][i])
+    emulated_individual = st.text_input(f"Panelist {i} Emulated Expert: ", value=st.session_state["panelist_emulated_individual"][i])
     
     if st.checkbox(f"Is this panelist the Moderator?", key=f"mod_{i}"):
         moderator_name = name  # Assign this panelist as the moderator
