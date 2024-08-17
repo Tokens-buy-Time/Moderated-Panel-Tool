@@ -43,7 +43,7 @@ if "panelist_emulated_individual" not in st.session_state:
         "Clayton Christensen",
         "Steve Blank",
         "Alexander Osterwalder",
-        Bridger Pennington",
+        "Bridger Pennington",
         "Ernestine Fu",
         "Andy Jarry"
     ]
