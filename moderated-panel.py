@@ -130,4 +130,8 @@ response = openai.ChatCompletion.create(
     temperature=0.7
 )
 
-st.write(response.choices[0].text)
+# Display of responses
+
+generated_text = response['choices'][0]['message']['content']
+st.subheader("Response from ChatGPT:")
+st.write(generated_text)
