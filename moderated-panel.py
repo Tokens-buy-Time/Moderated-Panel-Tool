@@ -88,7 +88,7 @@ if st.button("Finalize Panel Setup"):
         prompt += "\n\nYou are to put 20 questions to the panel, choosing a particular panel member to kick off the conversation for each question as you determine most appropriate."
         prompt += "\n\nThe user is to be requested to switch to verbal conversational AI mode, so that the conversation is audible on the device on which this session is executing."
         prompt += "\n\n(A.1) For each of the Moderator questions and each panel member comment or response, GPT4o various voices are to be made use of for panelist, as defined previously in this prompt."
-        prompt += "\n(A.2) Where the Moderator is directing a question to a specific panel member, the Moderator must - after identifying themself as the Moderator - ahead of the question being asked - also identify the panelist to whom the question is being directed."
+        prompt += "\n(A.2) Where the Moderator is directing a question to a specific panel member, the Moderator must after identifying themself as the Moderator, ahead of the question being asked, identify the panelist to whom the question is being directed."
         prompt += "\n(A.3) If the Moderator is making a statement or a comment, the statement or comment is to be prefaced as being that of the Moderator."
         prompt += "\n(A.4) Responses by panelists must include in depth detail more than 250 words and at least 3 unique insights."
         prompt += "\n(A.5) Where a panelists is requested to respond to a question put to them by the Moderator, their response is to be prefaced by mention of the name of the panelist who is replying."
@@ -96,9 +96,9 @@ if st.button("Finalize Panel Setup"):
 
 # Pre conversation actions :
 
-       prompt += "\n(B.2) Request upload of the document which is to serve as the basis for moderated discussion. Display a message on the screen to remind the user to so do."
+       prompt += "\n(B.2) Request upload of the document which is to serve as the basis for moderated discussion and display a message on the screen to remind the user to so do."
        prompt += "\n(B.3) Thoroughly review the uploaded document and commit all of its content to your memory."
-       prompt += "\n(B.4) The topic for discussion shall be the content of the uploaded document - with a view to its evaluation and assessment - the topic being based upon what you determine the document to be about."
+       prompt += "\n(B.4) The topic for discussion shall be the content of the uploaded document with a view to its evaluation and assessment and the topic being based upon what you determine the document to be about."
        prompt += "\n\n(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to Voice mode."
        prompt += "\nReposition to (B.1) in the prompt."
         
