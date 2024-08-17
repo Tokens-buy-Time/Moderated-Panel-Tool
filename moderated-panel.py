@@ -134,7 +134,7 @@ await openai.chat.completions.create(
     max_tokens: 1024,
     temperature: 0.7
     }
-)
+ )
 
 # Display of responses
 
