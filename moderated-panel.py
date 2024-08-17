@@ -23,7 +23,7 @@ if "panelist_name" not in st.session_state:
         Alex,
         Bridger,
         Ernestine,
-        Andy.
+        Andy
     ]
 
 if "panelist_expertise" not in st.session_state:
@@ -34,7 +34,7 @@ if "panelist_expertise" not in st.session_state:
         Business Model Design,
         Private Equity Funds,
         Venture Capital,
-        Systems Engineering.
+        Systems Engineering
     ]
     
 if "panelist_emulated_individual" not in st.session_state:
@@ -45,7 +45,7 @@ if "panelist_emulated_individual" not in st.session_state:
         Alexander Osterwalder,
         Bridger Pennington,
         Ernestine Fu,
-        Andy Jarry.
+        Andy Jarry
     ]
 
 # Input for each panelist
