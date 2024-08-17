@@ -45,7 +45,7 @@ if "panelist_emulated_individual" not in st.session_state:
         "Alexander Osterwalder",
         "Bridger Pennington",
         "Ernestine Fu",
-        "Andy Jarry"
+        "Andy Jassy"
     ]
 
 # Input for each panelist
