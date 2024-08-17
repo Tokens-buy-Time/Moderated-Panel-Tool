@@ -87,7 +87,7 @@ if st.button("Finalize Panel Setup"):
 
 # Now you can use openai as usual
 
-response = Client.chat.Completion.create(
+response = client.chat.Completion.create(
     model="gpt-4o",
     prompt="Good evening, switch to voice mode and experience this Moderated Panel discussiom",
     max_tokens=50
