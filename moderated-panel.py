@@ -120,7 +120,7 @@ if st.button("Send Prompt to ChatGPT"):
 
 # Now you can use openai as usual
 
-response = client.chat.Completion.create(
+response = openai.chat.Completion.create(
     model="gpt-4o",
     prompt="Good evening, switch to voice mode and experience this Moderated Panel discussiom",
     max_tokens=50
