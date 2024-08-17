@@ -125,7 +125,7 @@ if "prompt" not in st.session_state:
     st.session_state["prompt"] = ""
 
 
-await openai.chat.completions.create(
+openai.chat.completions.create(
     {
     model: "gpt-4o",
     messages: [
