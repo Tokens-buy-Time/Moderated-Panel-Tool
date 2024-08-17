@@ -49,7 +49,7 @@ if "panelist_emulated_individual" not in st.session_state:
     ]
 
 # Input for each panelist
-for i in range(1, 8):  # Assuming 7 panelists plus moderator maximum
+for i in range(0, 7):  # Assuming 7 panelists plus moderator maximum
     name = st.text_input(f"Panelist {i} Name: ", value=st.session_state["panelist_name"][i])
     expertise = st.text_input(f"Panelist {i} Area of Expertise: ", value=st.session_state["panelist_expertise"][i])
     emulated_individual = st.text_input(f"Panelist {i} Emulated Expert: ", value=st.session_state["panelist_emulated_individual"][i])
