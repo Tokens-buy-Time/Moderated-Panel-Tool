@@ -120,10 +120,14 @@ if st.button("Send Prompt to ChatGPT"):
 
 # Now you can use openai as usual
 
-response = openai.chat.Completion.create(
-    model="gpt-4o",
-    prompt="Good evening, switch to voice mode and experience this Moderated Panel discussiom",
-    max_tokens=50
+response = openai.ChatCompletion.create(
+    model="gpt-4",
+    messages=[
+        {"role": "system", "content": "Welcome, happy you are joining us for this insightful and informative discussion."},
+        {"role": "user", "content": prompt}
+    ],
+    max_tokens=1024,
+    temperature=0.7
 )
 
 st.write(response.choices[0].text)
