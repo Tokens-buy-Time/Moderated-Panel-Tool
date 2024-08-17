@@ -1,5 +1,7 @@
 import streamlit as st
-import openai
+import OpenAI from "openai";
+const openai = new OpenAI();
+
 
 # Get the API key from Streamlit secrets
 # openai_api_key = st.secrets[general]["OPENAI_API_KEY"]
@@ -123,11 +125,12 @@ if st.button("Send Prompt to ChatGPT"):
 if "prompt" not in st.session_state:
     st.session_state["prompt"] = ""
 
-response = openai.chat.Completion.create(
-    model="gpt-4",
-    messages=[
-        {"role": "system", "content": "Welcome, happy you are joining us for this insightful and informative discussion."},
-        {"role": "user", "content": prompt}
+
+const completion = await openai.chat.completions.create({
+    model: "gpt-4o",
+    messages: [
+        {"role": "user", "content": "Welcome, happy you are able to join in for this insightful and informitave discussion."}
+        model="gpt-4"
     ],
     max_tokens=1024,
     temperature=0.7
