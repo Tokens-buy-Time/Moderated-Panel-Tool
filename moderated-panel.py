@@ -91,10 +91,6 @@ if st.button("Finalize Panel Setup"):
         st.text_area("Engineered Prompt:", prompt)
 
 
-
-
-
-
 # Add input fields and finalize the panel setup as before...
 
 # Button to send prompt to OpenAI API
