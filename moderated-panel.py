@@ -93,14 +93,11 @@ if st.button("Finalize Panel Setup"):
         prompt += "\n(A.4) Responses by panelists must include in depth detail more than 250 words and at least 3 unique insights."
         prompt += "\n(A.5) Where a panelists is requested to respond to a question put to them by the Moderator, their response is to be prefaced by mention of the name of the panelist who is replying."
         prompt += "\n(A.6) Continue to (A.1) only after reviewing the whole prompt for the first time, meaning, rewind to (A.1) if the full Engineered Prompt has previously been read all the way to (B.5)."
-
-# Pre conversation actions :
-
-       prompt += "\n(B.2) Request upload of the document which is to serve as the basis for moderated discussion and display a message on the screen to remind the user to so do."
-       prompt += "\n(B.3) Thoroughly review the uploaded document and commit all of its content to your memory."
-       prompt += "\n(B.4) The topic for discussion shall be the content of the uploaded document with a view to its evaluation and assessment and the topic being based upon what you determine the document to be about."
-       prompt += "\n\n(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to Voice mode."
-       prompt += "\nReposition to (B.1) in the prompt."
+        prompt += "\n(B.2) Request upload of the document which is to serve as the basis for moderated discussion and display a message on the screen to remind the user to so do."
+        prompt += "\n(B.3) Thoroughly review the uploaded document and commit all of its content to your memory."
+        prompt += "\n(B.4) The topic for discussion shall be the content of the uploaded document with a view to its evaluation and assessment and the topic being based upon what you determine the document to be about."
+        prompt += "\n\n(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to Voice mode."
+        prompt += "\nReposition to (B.1) in the prompt."
         
     # Display the final prompt
         st.text_area("Engineered Prompt:", prompt)
