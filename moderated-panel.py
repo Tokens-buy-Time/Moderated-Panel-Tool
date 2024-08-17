@@ -99,7 +99,7 @@ if st.button("Finalize Panel Setup"):
        prompt += "\n(B.2) Request upload of the document which is to serve as the basis for moderated discussion. Display a message on the screen to remind the user to so do."
        prompt += "\n(B.3) Thoroughly review the uploaded document and commit all of its content to your memory."
        prompt += "\n(B.4) The topic for discussion shall be the content of the uploaded document - with a view to its evaluation and assessment - the topic being based upon what you determine the document to be about."
-       prompt += "\n\n(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to ‘Voice mode’
+       prompt += "\n\n(B.5) Instruct the user that you have completed reading the Engineered Prompt and that they can now switch to Voice mode."
        prompt += "\nReposition to (B.1) in the prompt."
         
     # Display the final prompt
