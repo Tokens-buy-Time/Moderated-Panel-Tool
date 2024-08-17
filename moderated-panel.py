@@ -15,7 +15,7 @@ panelist_expertise = []
 panelist_emulated_individual = []
 moderator_name = None
 
-if "panelist_name " not in st.session_state:
+if "panelist_name" not in st.session_state:
     st.session_state["panelist_name"] = [
         Michael,
         Clayton,
