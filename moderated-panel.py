@@ -1,5 +1,6 @@
 import streamlit as st
 import openai
+client = openai()
 
 # Get the API key from Streamlit secrets
 # openai_api_key = st.secrets["default"]["OPENAI_API_KEY"]
@@ -86,7 +87,7 @@ if st.button("Finalize Panel Setup"):
 
 # Now you can use openai as usual
 
-response = chat.Completion.create(
+response = Client.chat.Completion.create(
     model="gpt-4o",
     prompt="Good evening, switch to voice mode and experience this Moderated Panel discussiom",
     max_tokens=50
