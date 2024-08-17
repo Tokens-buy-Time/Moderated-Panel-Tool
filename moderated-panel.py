@@ -28,24 +28,24 @@ if "panelist_name" not in st.session_state:
 
 if "panelist_expertise" not in st.session_state:
     st.session_state["panelist_expertise"] = [
-        Business Development,
-        Innovation,
-        Lean Start Up,
-        Business Model Design,
-        Private Equity Funds,
-        Venture Capital,
-        Systems Engineering
+        "Business Development",
+        "Innovation",
+        "Lean Start Up",
+        "Business Model Design",
+        "Private Equity Funds",
+        "Venture Capital",
+        "Systems Engineering"
     ]
     
 if "panelist_emulated_individual" not in st.session_state:
     st.session_state["panelist_emulated_individual"] = [
-        Michael J Skok,
-        Clayton Christensen,
-        Steve Blank,
-        Alexander Osterwalder,
-        Bridger Pennington,
-        Ernestine Fu,
-        Andy Jarry
+        "Michael J Skok",
+        "Clayton Christensen",
+        "Steve Blank",
+        "Alexander Osterwalder",
+        Bridger Pennington",
+        "Ernestine Fu",
+        "Andy Jarry"
     ]
 
 # Input for each panelist
