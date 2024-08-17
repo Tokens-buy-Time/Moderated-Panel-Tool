@@ -131,8 +131,8 @@ await openai.chat.completions.create(
     messages: [
         {"role": "user", "content": "Welcome, happy you are able to join in for this insightful and informitave discussion."}
     ],
-    max_tokens:=1024,
-    temperature:=0.7
+    max_tokens: 1024,
+    temperature: 0.7
     }
 )
 
