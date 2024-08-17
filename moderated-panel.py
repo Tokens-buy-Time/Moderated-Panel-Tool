@@ -120,6 +120,9 @@ if st.button("Send Prompt to ChatGPT"):
 
 # Now you can use openai as usual
 
+if "prompt" not in st.session_state:
+    st.session_state["prompt"] = ""
+
 response = openai.ChatCompletion.create(
     model="gpt-4",
     messages=[
