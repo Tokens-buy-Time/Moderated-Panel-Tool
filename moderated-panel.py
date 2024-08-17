@@ -17,13 +17,13 @@ moderator_name = None
 
 if "panelist_name" not in st.session_state:
     st.session_state["panelist_name"] = [
-        Michael,
-        Clayton,
-        Steve,
-        Alex,
-        Bridger,
-        Ernestine,
-        Andy
+        "Michael",
+        "Clayton",
+        "Steve",
+        "Alex",
+        "Bridger",
+        "Ernestine",
+        "Andy"
     ]
 
 if "panelist_expertise" not in st.session_state:
