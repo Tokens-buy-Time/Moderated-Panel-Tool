@@ -15,6 +15,15 @@ panelist_expertise = []
 panelist_emulated_individual = []
 moderator_name = None
 
+if "panelist_name " not in st.session_state:
+    st.session_state["panelist_name"]
+
+if "panelist_expertise" not in st.session_state:
+    st.session_state["panelist_expertise"]
+
+if "panelist_emulated_individual" not in st.session_state:
+    st.session_state["panelist_emulated_individual"]
+
 # Input for each panelist
 for i in range(1, 8):  # Assuming 7 panelists plus moderator maximum
     
