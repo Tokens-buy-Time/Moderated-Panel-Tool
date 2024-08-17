@@ -16,8 +16,7 @@ panelist_emulated_individual = []
 moderator_name = None
 
 if "panelist_name" not in st.session_state:
-    st.session_state["panelist_name"] = 
-    [
+    st.session_state["panelist_name"] = [
         Michael,
         Clayton,
         Steve,
@@ -28,8 +27,7 @@ if "panelist_name" not in st.session_state:
     ]
 
 if "panelist_expertise" not in st.session_state:
-    st.session_state["panelist_expertise"] = 
-    [
+    st.session_state["panelist_expertise"] = [
         Business Development,
         Innovation,
         Lean Start Up,
@@ -40,8 +38,7 @@ if "panelist_expertise" not in st.session_state:
     ]
     
 if "panelist_emulated_individual" not in st.session_state:
-    st.session_state["panelist_emulated_individual"] = 
-    [
+    st.session_state["panelist_emulated_individual"] = [
         Michael J Skok,
         Clayton Christensen,
         Steve Blank,
