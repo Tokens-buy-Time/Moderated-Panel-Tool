@@ -1,6 +1,5 @@
 import streamlit as st
 import OpenAI
-openai = new OpenAI():
 
 
 # Get the API key from Streamlit secrets
