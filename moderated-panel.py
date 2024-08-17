@@ -126,11 +126,10 @@ if "prompt" not in st.session_state:
     st.session_state["prompt"] = ""
 
 
-const completion = await openai.chat.completions.create({
+const completion = await openai.chat.completions.create(
     model: "gpt-4o",
     messages: [
         {"role": "user", "content": "Welcome, happy you are able to join in for this insightful and informitave discussion."}
-        model="gpt-4"
     ],
     max_tokens=1024,
     temperature=0.7
