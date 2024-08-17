@@ -1,9 +1,8 @@
 import streamlit as st
 import openai
 
-
 # Get the API key from Streamlit secrets
-# openai_api_key = st.secrets[general]["OPENAI_API_KEY"]
+# openai.api_key = st.secrets["OPENAI_API_KEY"] # Uncomment this when secrets are available
 
 # Title of the app
 st.title("Moderated Panel Tool")
@@ -50,10 +49,10 @@ if "panelist_emulated_individual" not in st.session_state:
     ]
 
 # Input for each panelist
-for i in range(0, 7):  # Assuming 7 panelists plus moderator maximum
-    name = st.text_input(f"Panelist {i} Name: ", value=st.session_state["panelist_name"][i])
-    expertise = st.text_input(f"Panelist {i} Area of Expertise: ", value=st.session_state["panelist_expertise"][i])
-    emulated_individual = st.text_input(f"Panelist {i} Emulated Expert: ", value=st.session_state["panelist_emulated_individual"][i])
+for i in range(7):  # Assuming 7 panelists plus moderator maximum
+    name = st.text_input(f"Panelist {i+1} Name: ", value=st.session_state["panelist_name"][i])
+    expertise = st.text_input(f"Panelist {i+1} Area of Expertise: ", value=st.session_state["panelist_expertise"][i])
+    emulated_individual = st.text_input(f"Panelist {i+1} Emulated Expert: ", value=st.session_state["panelist_emulated_individual"][i])
     
     if st.checkbox(f"Is this panelist the Moderator ?", key=f"mod_{i}"):
         moderator_name = name  # Assign this panelist as the moderator
@@ -64,11 +63,7 @@ for i in range(0, 7):  # Assuming 7 panelists plus moderator maximum
         panelist_emulated_individual.append(emulated_individual)
     
     st.write(" ")
-    if i > 7:
-        break
     
-    
-
 # Button to finalize and generate the prompt
 if st.button("Finalize Panel Setup"):
     
@@ -89,55 +84,28 @@ if st.button("Finalize Panel Setup"):
         prompt += "\n\nYou are to put 20 questions to the panel, choosing a particular panel member to kick off the conversation for each question as you determine most appropriate."
         prompt += "\n\nThe user is to be requested to switch to verbal conversational AI mode, so that the conversation is audible on the device on which this session is executing."
         
-        # Display the final prompt
+        # Store the final prompt in session state
+        st.session_state["prompt"] = prompt
         st.text_area("Engineered Prompt:", prompt)
-
-
-# Add input fields and finalize the panel setup as before...
 
 # Button to send prompt to OpenAI API
 if st.button("Send Prompt to ChatGPT"):
-    prompt = st.session_state['prompt']  # Assuming you've saved the prompt in session state
+    if "prompt" in st.session_state:
+        prompt = st.session_state["prompt"]
 
-    try:
-        response = openai.Completion.create(
-            engine="gpt-4",  # or "gpt-3.5-turbo" if you have restrictions
-            prompt=prompt,
-            max_tokens=1024,
-            n=1,
-            stop=None,
-            temperature=0.7,
-        )
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-4",  # or "gpt-3.5-turbo"
+                messages=[{"role": "system", "content": prompt}],
+                max_tokens=1024,
+                n=1,
+                temperature=0.7,
+            )
 
-        generated_text = response.choices[0].text.strip()
+            generated_text = response.choices[0].message["content"].strip()
 
-        st.subheader("Response from ChatGPT:")
-        st.write(generated_text)
+            st.subheader("Response from ChatGPT:")
+            st.write(generated_text)
 
-    except Exception as e:
-        st.error(f"Error: {e}")
-
-
-
-# Now you can use openai as usual
-
-if "prompt" not in st.session_state:
-    st.session_state["prompt"] = ""
-
-
-openai.chat.completions.create(
-    {
-    model: "gpt-4o",
-    messages: [
-        {"role": "user", "content": "Welcome, happy you are able to join in for this insightful and informitave discussion."}
-    ],
-    max_tokens: 1024,
-    temperature: 0.7
-    }
- )
-
-# Display of responses
-
-generated_text = response['choices'][0]['message']['content']
-st.subheader("Response from ChatGPT:")
-st.write(generated_text)
+        except Exception as e:
+            st.error(f"Error: {e}")
