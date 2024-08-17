@@ -1,5 +1,5 @@
 import streamlit as st
-import openai==0.28
+import openai
 
 # Get the API key from Streamlit secrets (make sure you have your API key set)
 # openai_api_key = st.secrets["OPENAI_API_KEY"]
