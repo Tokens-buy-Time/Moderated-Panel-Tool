@@ -116,5 +116,5 @@ if st.button("Send Prompt to ChatGPT"):
     #   st.subheader("Response from ChatGPT:")
     #   st.write(generated_text)
 
-    except Exception as e:
-        st.error(f"Error: {e}")
+    #except Exception as e:
+    #    st.error(f"Error: {e}")
