@@ -104,20 +104,18 @@ if st.button("Finalize Panel Setup"):
 
 # Button to send prompt to OpenAI API
 if st.button("Send Prompt to ChatGPT"):
-    prompt = st.session_state.get('prompt', '')  # Get the prompt from session state
+#    prompt = st.session_state.get('prompt', '')  # Get the prompt from session state
+    write("Tap inside the Engeenered Prompt pop up window, select all then copy. Start the ChatGPT Mobile App and paste the copied content into the ChatGPT
+          Mobile App's message window and select the Arrow icon to submit then follow the ChatGPT's instructions")
+    # try:
+    #    response = openai.ChatCompletion.create(
+    #       model="gpt-4" # or "gpt-3.5-turbo" if you have restrictions
+    #       messages=[{"role": "system", "content": #       max_tokens=#      temperature=#  )
 
-    try:
-        response = openai.ChatCompletion.create(
-            model= "gpt-3.5-turbo" if you have restrictions
-            messages=[{"role": "system", "content": prompt}],
-            max_tokens=1024,
-            temperature=0.7,
-        )
+    #   generated_text = response['choices'][0]['#
 
-        generated_text = response['choices'][0]['message']['content']
-
-        st.subheader("Response from ChatGPT:")
-        st.write(generated_text)
+    #   st.subheader("Response from ChatGPT:")
+    #   st.write(generated_text)
 
     except Exception as e:
         st.error(f"Error: {e}")
