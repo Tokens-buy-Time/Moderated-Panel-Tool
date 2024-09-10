@@ -105,7 +105,7 @@ if st.button("Finalize Panel Setup"):
 # Button to send prompt to OpenAI API
 if st.button("Send Prompt to ChatGPT"):
 #    prompt = st.session_state.get('prompt', '')  # Get the prompt from session state
-    st.write("Tap inside the Engeenered Prompt pop up window, select all then copy. Start the ChatGPT Mobile App and paste the copied content into the ChatGPT Mobile App's message window and select the Arrow icon to submit then follow the ChatGPT's instructions")
+    st.write("The above button is not functional for this freemium demo, so (1) Tap inside the Engeenered Prompt pop up window, (2) select all then (3) copy. (4) Start the ChatGPT Mobile App and (5) paste the copied content into the ChatGPT Mobile App's message window then (6) select the Arrow icon to submit. (7) follow the ChatGPT's instructions")
     # try:
     #    response = openai.ChatCompletion.create(
     #       model="gpt-4" # or "gpt-3.5-turbo" if you have restrictions
