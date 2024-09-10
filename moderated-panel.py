@@ -106,7 +106,7 @@ if st.button("Finalize Panel Setup"):
 if st.button("Send Prompt to ChatGPT"):
 #    prompt = st.session_state.get('prompt', '')  # Get the prompt from session state
     st.write("The above button is not functional for this freemium demo")
-    st.write("so 1. Tap inside the "Engineered Prompt" pop up window")
+    st.write("so 1. Tap inside the 'Engineered Prompt' pop up window")
     st.write("2. 'select all' then")
     st.write("3. 'copy'")
     st.write("4. Start the ChatGPT Mobile App and")
