@@ -108,7 +108,7 @@ if st.button("Send Prompt to ChatGPT"):
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # or "gpt-3.5-turbo" if you have restrictions
+            model="gpt-4o",  # or "gpt-3.5-turbo" if you have restrictions
             messages=[{"role": "system", "content": prompt}],
             max_tokens=1024,
             temperature=0.7,
