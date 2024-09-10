@@ -1,9 +1,8 @@
-import streamlit as st
 import openai
+import streamlit as st
 
-# Get the API key from Streamlit secrets (make sure you have your API key set)
-openai.api_key = ["OPENAI_API_KEY"]
-
+# Access the secret securely
+openai.api_key = st.secrets["openai"]["api_key"]
 # Title of the app
 st.title("Moderated Panel Tool")
 
