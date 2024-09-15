@@ -5,6 +5,10 @@ import streamlit as st
 openai.api_key = st.secrets["openai"]["api_key"]
 # Title of the app
 st.title("Moderated Panel Tool")
+#Graphic Design element introduced
+st.image("Moderated-Panel.gif", caption="Moderated Panel discussion", use_column_width=True)
+st.write(" ")
+st.write("follow the instructions carefully, especially regarding how to select and copy the Engineered Prompt generated when you press the Finalize Prompt button. Your particular device may not present the pop up windows as mentioned. Be prepared to be thoroughly amazed"
 
 # Section for Panelists
 st.header("Panel Setup")
@@ -106,7 +110,7 @@ if st.button("Finalize Panel Setup"):
 if st.button("Send Prompt to ChatGPT"):
 #    prompt = st.session_state.get('prompt', '')  # Get the prompt from session state
     st.write("The above button is not functional for this freemium demo")
-    st.write("so :- ")
+    st.write("Thus instead, please use the following work-around :- ")
     st.write("1. Tap inside the 'Engineered Prompt' pop up window")
     st.write("2. 'select all' then")
     st.write("3. 'copy'")
