@@ -6,7 +6,7 @@ openai.api_key = st.secrets["openai"]["api_key"]
 # Title of the app
 st.title("Moderated Panel Tool")
 #Graphic Design element introduced
-st.image("Moderated-Panel.gif", caption="Moderated Panel discussion", use_column_width=True)
+st.image("Moderated-Panel.jpg", caption="Moderated Panel discussion", use_column_width=True)
 st.write(" ")
 st.write("follow the instructions carefully, especially regarding how to select and copy the Engineered Prompt generated when you press the Finalize Set up button. Your particular device may not present the pop up windows as mentioned. Be prepared to be thoroughly amazed")
 
