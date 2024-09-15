@@ -8,7 +8,7 @@ st.title("Moderated Panel Tool")
 #Graphic Design element introduced
 st.image("Moderated-Panel.gif", caption="Moderated Panel discussion", use_column_width=True)
 st.write(" ")
-st.write("follow the instructions carefully, especially regarding how to select and copy the Engineered Prompt generated when you press the Finalize Prompt button. Your particular device may not present the pop up windows as mentioned. Be prepared to be thoroughly amazed"
+st.write("follow the instructions carefully, especially regarding how to select and copy the Engineered Prompt generated when you press the Finalize Prompt button. Your particular device may not present the pop up windows as mentioned. Be prepared to be thoroughly amazed")
 
 # Section for Panelists
 st.header("Panel Setup")
