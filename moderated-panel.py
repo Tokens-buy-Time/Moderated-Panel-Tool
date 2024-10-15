@@ -112,7 +112,7 @@ if st.button("Send Prompt to ChatGPT"):
     st.write("The above button is not currently functional for this freemium demo")
     st.write("Thus instead, please use the following work-around :- ")
     st.write("First press the Send to ChatGPT button. The Engineered Prompt will dissapear but you'll then just need to press the Finalize Set up button to have the Engineered Prompt window re-appear with the prompt within - then follow the remaining instructions.")
-    st.write("1. Tap inside the 'Engineered Prompt' pop up window")
+    st.write("1. 'Smartly' tap once inside the 'Engineered Prompt' pop up window")
     st.write("2. 'select all' then")
     st.write("3. 'copy'")
     st.write("4. Start the ChatGPT Mobile App and")
