@@ -121,7 +121,7 @@ if st.button("Send Prompt to ChatGPT"):
     st.write("7. follow the ChatGPT's instructions.")
     st.write("8. ⚠️ - Remember, you will need to upload your 'topic briefing' PDF, so it is best to create it in advance.")
     st.write(" ")
-    st.write("9. ⚠️ - Once you have followed the instruction given by ChatGPT, GPT-4o, while in text mode, you will be instructed to use the headphones icon - near to the message box, typically to the right handside of it - to switch over to voice mode. Once you have successfully switched over - you may have to confirm selection of a voice to be used first, if you are executing the feature for the first time - you then should ask GPT-4o to 'read the Engineered Prompt in its entirety and then go to B.1 - when you see the text instruction 'start speaking' - this resets the execution so that the Moderator begins by introducing the panelists.")  
+    st.write("9. ⚠️ - Once you have followed the instruction given by ChatGPT, GPT-4o, while in text mode, you will be instructed to use the headphones icon - near to the message box, typically to the right handside of it - to switch over to voice mode. Once you have successfully switched over - you may have to confirm selection of a voice to be used first, if you are executing the feature for the first time - you then should ask GPT-4o to 'read the Engineered Prompt in its entirety and then go to B.1' - when you see the text instruction 'start speaking' - this resets ChatGPT, GPT-4o's execution of the 'Engineered Prompt', so that the Moderator begins by introducing the panelists.")  
     # try:
     #    response = openai.ChatCompletion.create(
     #       model="gpt-4" # or "gpt-3.5-turbo" if you have restrictions
