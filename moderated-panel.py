@@ -109,9 +109,9 @@ if st.button("Finalize Panel Setup"):
 # Button to send prompt to OpenAI API
 if st.button("Send Prompt to ChatGPT"):
 #    prompt = st.session_state.get('prompt', '')  # Get the prompt from session state
-    st.write("The above button is not functional for this freemium demo")
+    st.write("The above button is not currently functional for this freemium demo")
     st.write("Thus instead, please use the following work-around :- ")
-    st.write("First press the Send to ChatGPT button. The Engineered Prompt will dissapear but you'll then just need to press the Finalize Set up button to have the Engineered Prompt window re-appear with the prompt then follow the remaining instructions.")
+    st.write("First press the Send to ChatGPT button. The Engineered Prompt will dissapear but you'll then just need to press the Finalize Set up button to have the Engineered Prompt window re-appear with the prompt within - then follow the remaining instructions.")
     st.write("1. Tap inside the 'Engineered Prompt' pop up window")
     st.write("2. 'select all' then")
     st.write("3. 'copy'")
@@ -119,6 +119,9 @@ if st.button("Send Prompt to ChatGPT"):
     st.write("5. paste the copied content into the ChatGPT Mobile App's message window then")
     st.write("6. select the 'Arrow' icon to submit.")
     st.write("7. follow the ChatGPT's instructions.")
+    st.write("8. ⚠️ - Remember, you will need to upload your topic briefing PDF, so it is best to create it in advance.")
+    st.write(" ")
+    st.write("9. ⚠️ - Once you have followed the instruction given by ChatGPT, GPT-4o, while in text mode, you will be instructed to use the headphones icon, near to the message box, typicall to the right handside of it, to switch over to voice mode. Once you have successfully switched over - you may have to confirm a voice selection first, if you are running the feature for the first time - you should ask GPT-4o to 'read the Engineered Prompt in its entirety and then go to B.1 - this resets the execution so that the Moderator begins by introducing the panelists."  
     # try:
     #    response = openai.ChatCompletion.create(
     #       model="gpt-4" # or "gpt-3.5-turbo" if you have restrictions
